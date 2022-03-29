@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Validator;
 class ProductController extends Controller
 {
     public function __construct()
@@ -40,20 +41,35 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $image = $request->file('image');
-        $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
-        $destinationPath = public_path('upload/product_images');
-        $image->move($destinationPath, $input['imagename']);
+
+        $rules = array(
+            'name' => 'required',
+            'brand' => 'required',
+            'image' => 'required',
+            'weight' => 'required',
+            'color' => 'required',
+        );
+        $validator = Validator::make($request->all(),$rules);
+
+        if($validator->fails()) {
+            return $validator->errors();
+        }else{
+            $image = $request->file('image');
+            $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
+            $destinationPath = public_path('upload/product_images');
+            $image->move($destinationPath, $input['imagename']);
 
 
-        $product = new Product();
-        $product->name = $request->name;
-        $product->brand = $request->brand;
-        $product->image = $input['imagename'];
-        $product->weight = $request->weight;
-        $product->color = $request->color;
-        $product->save();
-        return response()->json(['message'=> 'Product Stored','product'=> $product]);
+            $product = new Product();
+            $product->name = $request->name;
+            $product->brand = $request->brand;
+            $product->image = $input['imagename'];
+            $product->weight = $request->weight;
+            $product->color = $request->color;
+            $product->save();
+            return response()->json(['message'=> 'Product Stored','product'=> $product]);
+        }
+
     }
 
     /**
@@ -88,8 +104,6 @@ class ProductController extends Controller
      */
     public function update(Request $request,$id)
     {
-//        dd($request->all());
-//        return response()->json(['message'=> $request->all()]);
         $product = Product::find($id);
         $product->name=$request->name;
         $product->brand=$request->brand;
