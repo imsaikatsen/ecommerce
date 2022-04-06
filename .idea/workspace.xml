@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="489880ed-0186-451c-a9ac-5c282df02428" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,37 +16,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProductController.php">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2022_04_06_215414_create_categories_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="56" column="26" lean-forward="true" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
-              <folding>
-                <element signature="e#40#63#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-              <folding>
-                <element signature="e#38#66#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/api.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="23" column="95" selection-start-line="23" selection-start-column="89" selection-end-line="23" selection-end-column="95" />
-              <folding>
-                <element signature="e#6#34#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="164">
+              <caret line="17" column="44" lean-forward="true" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -75,6 +47,7 @@
         <option value="$PROJECT_DIR$/app/Models/Product.php" />
         <option value="$PROJECT_DIR$/routes/api.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2022_04_06_215414_create_categories_table.php" />
       </list>
     </option>
   </component>
@@ -195,7 +168,7 @@
       <path value="$PROJECT_DIR$/vendor/lcobucci/jwt" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -207,7 +180,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -236,7 +208,19 @@
             <path>
               <item name="ecommerce-app" type="b2602c69:ProjectViewProjectNode" />
               <item name="ecommerce-app" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ecommerce-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ecommerce-app" type="462c0819:PsiDirectoryNode" />
               <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ecommerce-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ecommerce-app" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ecommerce-app" type="b2602c69:ProjectViewProjectNode" />
@@ -247,6 +231,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -299,18 +284,20 @@
       <workItem from="1648390132702" duration="2679000" />
       <workItem from="1648536829763" duration="3411000" />
       <workItem from="1648567264700" duration="2388000" />
-      <workItem from="1648584193733" duration="2723000" />
+      <workItem from="1648584193733" duration="3545000" />
+      <workItem from="1648938516419" duration="626000" />
+      <workItem from="1648983471229" duration="637000" />
+      <workItem from="1649278985013" duration="1270000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64295000" />
+    <option name="totallyTimeSpent" value="67650000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31240544" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3267776" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -325,7 +312,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.30932897" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.26350245" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -377,20 +364,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2022_03_05_220257_add_image_to_products.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2022_03_04_073404_create_products_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Product.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -411,6 +384,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+          <folding>
+            <element signature="e#38#66#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/api.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -421,23 +404,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php">
+    <entry file="file://$PROJECT_DIR$/app/Models/Category.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-          <folding>
-            <element signature="e#38#66#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="136">
+          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CategoryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-714" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProductController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="56" column="26" lean-forward="true" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
+        <state relative-caret-position="124">
+          <caret line="64" column="46" selection-start-line="64" selection-start-column="46" selection-end-line="64" selection-end-column="46" />
           <folding>
             <element signature="e#40#63#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2022_03_05_220257_add_image_to_products.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2022_03_04_073404_create_products_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="36" lean-forward="true" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2022_04_06_215414_create_categories_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="17" column="44" lean-forward="true" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
         </state>
       </provider>
     </entry>
