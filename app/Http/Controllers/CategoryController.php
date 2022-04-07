@@ -4,9 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Validator;
 
 class CategoryController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth')->except(['index','show']);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +20,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        $categories = Category::orderBy('id','DESC')->get();
+        return response()->json(['categories' => $categories]);
     }
 
     /**
@@ -35,7 +42,19 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $rules = array(
+            'category_name' => 'required',
+        );
+        $validator = Validator::make($request->all(),$rules);
+
+        if($validator->fails()) {
+            return $validator->errors();
+        }else{
+            $category = new Category();
+            $category->category_name = $request->category_name;
+            $category->save();
+            return response()->json(['message'=> 'Category Stored','category'=> $category]);
+        }
     }
 
     /**
@@ -44,9 +63,10 @@ class CategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function show(Category $category)
+    public function show($id)
     {
-        //
+        $category = Category::find($id);
+        return response()->json(['category' => $category]);
     }
 
     /**
@@ -67,9 +87,13 @@ class CategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Category $category)
+    public function update(Request $request,$id)
     {
-        //
+        $category = Category::find($id);
+        $category->category_name = $request->category_name;
+        $category->save();
+
+        return response()->json(['message'=> 'Category Updated','category'=> $category]);
     }
 
     /**
@@ -78,8 +102,12 @@ class CategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Category $category)
+    public function destroy($id)
     {
-        //
+        $category = Category::find($id);
+        $category->delete();
+
+        return response()->json(['message'=> 'Category Deleted','category'=> $category]);
+
     }
 }

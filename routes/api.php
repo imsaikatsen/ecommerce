@@ -21,12 +21,18 @@ Route::group([
     Route::post('/logout', [AuthController::class, 'logout']);
     Route::post('/refresh', [AuthController::class, 'refresh']);
     Route::get('/user-profile', [AuthController::class, 'userProfile']);
-    Route::put('products/update/{id}', [\App\Http\Controllers\ProductController::class, 'update']);
 
 
     Route::get('products/product-list', [\App\Http\Controllers\ProductController::class, 'index']);
     Route::post('products/store', [\App\Http\Controllers\ProductController::class, 'store']);
     Route::get('products/show/{id}', [\App\Http\Controllers\ProductController::class, 'show']);
-
+    Route::put('products/update/{id}', [\App\Http\Controllers\ProductController::class, 'update']);
     Route::delete('products/delete/{id}', [\App\Http\Controllers\ProductController::class, 'destroy']);
+
+
+    Route::get('categories/category-list', [\App\Http\Controllers\CategoryController::class, 'index']);
+    Route::post('categories/store', [\App\Http\Controllers\CategoryController::class, 'store']);
+    Route::get('categories/show/{id}', [\App\Http\Controllers\CategoryController::class, 'show']);
+    Route::put('categories/update/{id}', [\App\Http\Controllers\CategoryController::class, 'update']);
+    Route::delete('categories/delete/{id}', [\App\Http\Controllers\CategoryController::class, 'destroy']);
 });
