@@ -44,6 +44,7 @@ class ProductController extends Controller
 
         $rules = array(
             'name' => 'required',
+            'description' => 'required',
             'brand' => 'required',
             'image' => 'required',
             'weight' => 'required',
@@ -62,6 +63,7 @@ class ProductController extends Controller
 
             $product = new Product();
             $product->name = $request->name;
+            $product->description = $request->description;
             $product->brand = $request->brand;
             $product->image = $input['imagename'];
             $product->weight = $request->weight;
